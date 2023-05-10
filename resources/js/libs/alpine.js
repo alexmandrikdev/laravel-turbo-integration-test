@@ -15,6 +15,10 @@ function initAlpineTurboPermanentFix() {
     });
 }
 
-if (window.Alpine !== undefined) {
-    initAlpineTurboPermanentFix();
-}
+import Alpine from 'alpinejs';
+
+window.Alpine = Alpine;
+
+Alpine.start();
+
+initAlpineTurboPermanentFix();
